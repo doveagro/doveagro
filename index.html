@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dove Agro (Pvt) Ltd — Khad, Spray aur Beej | Multan, Pakistan</title>
+<meta name="description" content="Dove Agro (Pvt) Ltd — kisano ke liye khad, zarai spray, beej aur micronutrients. Multan, Punjab, Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --soil:#241F17;
+    --leaf:#1E5B39;
+    --leaf-dark:#174A2E;
+    --canal:#0E7C7B;
+    --wheat:#E0A32B;
+    --husk:#EFF2E9;
+    --husk-2:#E3E8D8;
+    --line:#C6CDB6;
+    --white:#FFFFFF;
+    --shadow:0 1px 0 var(--line), 0 8px 24px rgba(36,31,23,.07);
+    --wrap:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *{animation:none !important;transition:none !important}
+  }
+  body{
+    background:var(--husk);
+    color:var(--soil);
+    font-family:'Archivo',system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+  .ur{font-family:'Noto Nastaliq Urdu',serif;direction:rtl;line-height:2.1}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--wheat);outline-offset:3px}
+
+  /* ---------- HEADER ---------- */
+  .top{
+    background:var(--soil);color:#DCD8CD;
+    font-size:12.5px;letter-spacing:.02em;
+  }
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+  .top b{color:var(--wheat);font-weight:600}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--husk);
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .mark{
+    width:40px;height:40px;flex:0 0 40px;border-radius:9px;
+    background:var(--leaf);display:grid;place-items:center;
+  }
+  .brand-name{font-weight:800;font-size:19px;letter-spacing:-.02em;line-height:1.1}
+  .brand-sub{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6B7061;font-weight:500}
+  nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  nav a{text-decoration:none;font-size:14.5px;font-weight:500;color:#3A382F;padding:6px 0;border-bottom:2px solid transparent}
+  nav a:hover{border-bottom-color:var(--wheat)}
+  .wa{
+    background:var(--leaf);color:#fff;text-decoration:none;
+    padding:11px 17px;border-radius:8px;font-weight:600;font-size:14px;
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+  }
+  .wa:hover{background:#174a2e}
+  .burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:44px;height:42px;cursor:pointer}
+  .burger span{display:block;width:20px;height:2px;background:var(--soil);margin:4px auto}
+  @media(max-width:900px){
+    nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--husk);border-bottom:1px solid var(--line);padding:8px 20px 20px}
+    nav.open{display:block}
+    nav ul{flex-direction:column;align-items:flex-start;gap:0}
+    nav li{width:100%;border-bottom:1px solid var(--husk-2)}
+    nav a{display:block;padding:14px 0;font-size:16px}
+    .burger{display:block}
+    header .wa{display:none}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--leaf);color:#EFF2E9;position:relative;overflow:hidden}
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(115deg,rgba(255,255,255,.045) 0 2px,transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:2;padding-top:56px;padding-bottom:0}
+  .eyebrow{
+    display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--wheat);
+    border:1px solid rgba(224,163,43,.5);border-radius:99px;padding:6px 13px;margin-bottom:22px;
+  }
+  .hero h1.ur{font-size:clamp(27px,7vw,52px);font-weight:700;color:#fff;margin-bottom:6px}
+  .hero h2{
+    font-size:clamp(20px,3.4vw,30px);font-weight:500;letter-spacing:-.02em;
+    color:#C9DCCC;max-width:640px;margin-bottom:26px;line-height:1.35;
+  }
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+  .btn-gold{
+    background:var(--wheat);color:#241F17;text-decoration:none;font-weight:700;font-size:15px;
+    padding:14px 24px;border-radius:8px;display:inline-block;
+  }
+  .btn-gold:hover{background:#F2B537}
+  .btn-ghost{
+    border:1.5px solid rgba(255,255,255,.4);color:#fff;text-decoration:none;font-weight:600;font-size:15px;
+    padding:12.5px 24px;border-radius:8px;display:inline-block;
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+  /* crop ticker = signature strip */
+  .crops{
+    border-top:1px solid rgba(255,255,255,.16);
+    display:flex;overflow-x:auto;scrollbar-width:none;
+  }
+  .crops::-webkit-scrollbar{display:none}
+  .crop{
+    flex:1 0 auto;min-width:132px;padding:18px 20px;
+    border-right:1px solid rgba(255,255,255,.16);
+  }
+  .crop .n{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--wheat);letter-spacing:.1em}
+  .crop .t{font-size:15.5px;font-weight:600;color:#fff;margin-top:3px}
+  .crop .u{font-family:'Noto Nastaliq Urdu',serif;direction:rtl;font-size:13px;color:#A9C4AE;line-height:1.9}
+
+  /* ---------- TRUST STRIP ---------- */
+  .strip{background:var(--soil);color:#E7E3D8}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;padding:0}
+  .stat{padding:24px 20px;border-right:1px solid rgba(255,255,255,.1)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-family:'IBM Plex Mono',monospace;font-size:24px;font-weight:600;color:var(--wheat)}
+  .stat .l{font-size:12.5px;color:#A8A395;letter-spacing:.03em;margin-top:2px}
+  @media(max-width:700px){.strip .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.1)}}
+
+  /* ---------- SECTIONS ---------- */
+  .sec{padding:72px 0}
+  .sec-head{margin-bottom:34px;max-width:720px}
+  .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--canal);font-weight:600;margin-bottom:10px;
+  }
+  .sec-head h3{font-size:clamp(26px,4.4vw,38px);font-weight:800;letter-spacing:-.03em;line-height:1.15}
+  .sec-head p{margin-top:12px;color:#5C6055;font-size:16px}
+  .sec-head .ur{font-size:17px;color:#4A4F44;margin-top:8px}
+
+  /* filter */
+  .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}
+  .filters button{
+    font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;cursor:pointer;
+    background:var(--white);border:1px solid var(--line);color:#4A4F44;
+    padding:10px 16px;border-radius:99px;transition:.15s;
+  }
+  .filters button:hover{border-color:var(--leaf)}
+  .filters button[aria-pressed="true"]{background:var(--soil);border-color:var(--soil);color:#fff}
+
+  /* ---------- PRODUCT CARDS (signature: bag-label) ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:940px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:620px){.grid{grid-template-columns:1fr}}
+  .card{
+    background:var(--white);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 1px 0 var(--line),0 14px 30px rgba(36,31,23,.12)}
+  .band{
+    padding:9px 16px;display:flex;justify-content:space-between;align-items:center;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  }
+  .band.khad{background:var(--wheat);color:#241F17}
+  .band.spray{background:var(--canal);color:#fff}
+  .band.beej{background:var(--leaf);color:#fff}
+  .band.micro{background:#7A4E9B;color:#fff}
+  .card-body{padding:18px 18px 4px}
+  .card h4{font-size:19px;font-weight:800;letter-spacing:-.02em;line-height:1.25}
+  .formula{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#6B7061;margin-top:4px}
+  .card .ur{font-size:14px;color:#4A4F44;margin-top:10px}
+  .spec{margin-top:14px;border-top:1px dashed var(--line)}
+  .spec div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--husk-2);font-size:13.5px}
+  .spec dt{color:#7A7F71;font-size:12.5px;letter-spacing:.02em}
+  .spec dd{font-family:'IBM Plex Mono',monospace;font-weight:500;text-align:right}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;padding:14px 18px 18px;margin-top:auto}
+  .tag{font-size:11.5px;background:var(--husk-2);color:#4A4F44;padding:4px 9px;border-radius:5px;font-weight:500}
+
+  /* ---------- CALENDAR TABLE ---------- */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+  table{border-collapse:collapse;width:100%;min-width:640px}
+  th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--husk-2);font-size:14.5px;vertical-align:top}
+  thead th{
+    background:var(--husk-2);font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:#4A4F44;font-weight:600;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  td.crop-name{font-weight:700}
+  td .u{font-family:'Noto Nastaliq Urdu',serif;direction:rtl;font-size:13px;color:#6B7061;display:block;line-height:2}
+
+  /* ---------- ABOUT ---------- */
+  .two{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:start}
+  @media(max-width:860px){.two{grid-template-columns:1fr;gap:32px}}
+  .prose p{color:#4A4F44;margin-bottom:14px}
+  .prose .ur{font-size:16.5px;color:#3A382F}
+  .infobox{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
+  .infobox h5{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--canal);margin-bottom:14px}
+  .infobox dl{display:grid;grid-template-columns:1fr;gap:0}
+  .infobox .row{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px dashed var(--husk-2);font-size:14px}
+  .infobox .row:last-child{border-bottom:none}
+  .infobox .row span:first-child{color:#7A7F71}
+  .infobox .row span:last-child{font-family:'IBM Plex Mono',monospace;font-weight:500;text-align:right}
+
+  /* ---------- DEALER ---------- */
+  .dealer{background:var(--canal);color:#fff;border-radius:14px;padding:38px 32px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+  @media(max-width:800px){.dealer{grid-template-columns:1fr;padding:28px 22px}}
+  .dealer h3{font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-.03em;margin-bottom:10px}
+  .dealer .ur{font-size:16px;color:#CDECEB}
+  .dealer p{color:#CDECEB;margin-top:10px}
+  .dealer-list{list-style:none;display:grid;gap:10px}
+  .dealer-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:#EAF7F6}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--wheat);flex:0 0 7px;margin-top:8px}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:800px){.contact-grid{grid-template-columns:1fr}}
+  .form{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:var(--shadow)}
+  .field{margin-bottom:15px}
+  label{display:block;font-size:13px;font-weight:600;color:#4A4F44;margin-bottom:6px}
+  input,select,textarea{
+    width:100%;font-family:'Archivo',sans-serif;font-size:15px;color:var(--soil);
+    background:var(--husk);border:1px solid var(--line);border-radius:8px;padding:12px 13px;
+  }
+  textarea{min-height:96px;resize:vertical}
+  .submit{
+    width:100%;background:var(--leaf);color:#fff;border:none;border-radius:8px;
+    padding:14px;font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;cursor:pointer;
+  }
+  .submit:hover{background:#174a2e}
+  .note{font-size:12.5px;color:#7A7F71;margin-top:10px;text-align:center}
+  .contact-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:var(--shadow)}
+  .cline{display:flex;gap:13px;padding:14px 0;border-bottom:1px dashed var(--husk-2)}
+  .cline:last-child{border-bottom:none}
+  .cline .ico{width:34px;height:34px;flex:0 0 34px;border-radius:8px;background:var(--husk-2);display:grid;place-items:center}
+  .cline .k{font-size:12px;color:#7A7F71;letter-spacing:.04em;text-transform:uppercase}
+  .cline .v{font-size:15px;font-weight:600;margin-top:1px}
+  .cline .v a{text-decoration:none}
+  .cline .v a:hover{color:var(--leaf)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--soil);color:#B4B0A4;padding:52px 0 26px;margin-top:20px}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12)}
+  @media(max-width:760px){.fgrid{grid-template-columns:1fr;gap:26px}}
+  footer h6{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--wheat);margin-bottom:14px}
+  footer ul{list-style:none;display:grid;gap:9px}
+  footer a{text-decoration:none;font-size:14px}
+  footer a:hover{color:#fff}
+  .fbrand{color:#fff;font-weight:800;font-size:20px;letter-spacing:-.02em;margin-bottom:8px}
+  .legal{font-size:12.5px;line-height:1.8;color:#8A8577;margin-top:22px}
+  .legal b{color:#B4B0A4;font-weight:600}
+  .disclaimer{
+    margin-top:18px;padding:13px 15px;border:1px solid rgba(255,255,255,.14);border-radius:9px;
+    font-size:12.5px;color:#9C978A;line-height:1.7;
+  }
+
+  .float-wa{
+    position:fixed;right:16px;bottom:16px;z-index:60;
+    width:56px;height:56px;border-radius:50%;background:#25D366;
+    display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25);
+  }
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top">
+  <div class="wrap">
+    <div>Multan, Punjab &nbsp;•&nbsp; Somwar–Hafta, 9:00 AM – 6:00 PM</div>
+    <div>Order &amp; Rate: <b>+92 300 0000000</b></div>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap">
+    <a href="#" class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M20 4C10 4 4 9 4 16c0 2 .6 3.4.6 3.4S8 12 18 9c0 0-7 3-11 11 6 1 13-2 13-16z" fill="#E0A32B"/>
+        </svg>
+      </span>
+      <span>
+        <span class="brand-name">Dove Agro</span><br>
+        <span class="brand-sub">(Pvt) Limited</span>
+      </span>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Menu kholein" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#calendar">Fasal Guide</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#dealer">Dealership</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="wa" href="https://wa.me/920000000000">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6 0l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.6-.1 1.3z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Registered Agri-Inputs Company · Multan</span>
+    <h1 class="ur">اچھا بیج، صحیح کھاد، بروقت سپرے</h1>
+    <h2>Kisan ki zameen se mandi tak — Dove Agro (Pvt) Ltd se asli khad, zarai spray aur certified beej, poori Janoobi Punjab mein.</h2>
+    <div class="hero-cta">
+      <a class="btn-gold" href="#products">Products dekhein</a>
+      <a class="btn-ghost" href="#dealer">Dealer banein</a>
+    </div>
+  </div>
+  <div class="crops">
+    <div class="crop"><div class="n">01</div><div class="t">Cotton</div><div class="u">کپاس</div></div>
+    <div class="crop"><div class="n">02</div><div class="t">Wheat</div><div class="u">گندم</div></div>
+    <div class="crop"><div class="n">03</div><div class="t">Mango</div><div class="u">آم</div></div>
+    <div class="crop"><div class="n">04</div><div class="t">Chilli</div><div class="u">مرچ</div></div>
+    <div class="crop"><div class="n">05</div><div class="t">Rice</div><div class="u">چاول</div></div>
+    <div class="crop"><div class="n">06</div><div class="t">Maize</div><div class="u">مکئی</div></div>
+    <div class="crop"><div class="n">07</div><div class="t">Sugarcane</div><div class="u">گنا</div></div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><div class="v">2018</div><div class="l">Company qaim hui</div></div>
+    <div class="stat"><div class="v">120+</div><div class="l">Dealers ka network</div></div>
+    <div class="stat"><div class="v">14</div><div class="l">Districts mein supply</div></div>
+    <div class="stat"><div class="v">30+</div><div class="l">Registered products</div></div>
+  </div>
+</div>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Product Range</div>
+      <h3>Khad, spray, beej — sab kuch ek jagah</h3>
+      <p>Har product Agriculture Department se registered hai. Har card par dose per acre aur pack size diya gaya hai, taake dealer aur kisan dono ko foran andaza ho jaye.</p>
+      <p class="ur">ہر پروڈکٹ کی مقدار فی ایکڑ لیبل کے مطابق ہے۔</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Product category filter">
+      <button data-cat="all" aria-pressed="true">Sab (12)</button>
+      <button data-cat="khad" aria-pressed="false">Khad / Fertilizer</button>
+      <button data-cat="spray" aria-pressed="false">Spray / Pesticide</button>
+      <button data-cat="beej" aria-pressed="false">Beej / Seeds</button>
+      <button data-cat="micro" aria-pressed="false">Micronutrients</button>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <!-- KHAD -->
+      <article class="card" data-cat="khad">
+        <div class="band khad"><span>Khad · Fertilizer</span><span>DA-101</span></div>
+        <div class="card-body">
+          <h4>Dove Urea 46%</h4>
+          <div class="formula">N 46% · Granular</div>
+          <p class="ur">پتوں کی بڑھوتری اور ہریالی کے لیے۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>2 bag</dd></div>
+            <div><dt>Pack size</dt><dd>50 kg</dd></div>
+            <div><dt>Waqt</dt><dd>1st &amp; 2nd irrigation</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Gandum</span><span class="tag">Kapas</span><span class="tag">Makai</span></div>
+      </article>
+
+      <article class="card" data-cat="khad">
+        <div class="band khad"><span>Khad · Fertilizer</span><span>DA-102</span></div>
+        <div class="card-body">
+          <h4>Dove DAP</h4>
+          <div class="formula">N 18% · P₂O₅ 46%</div>
+          <p class="ur">جڑوں کی مضبوطی کے لیے، بوائی کے وقت۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>1 bag</dd></div>
+            <div><dt>Pack size</dt><dd>50 kg</dd></div>
+            <div><dt>Waqt</dt><dd>Bijai ke waqt</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Gandum</span><span class="tag">Chawal</span><span class="tag">Sabziyat</span></div>
+      </article>
+
+      <article class="card" data-cat="khad">
+        <div class="band khad"><span>Khad · Fertilizer</span><span>DA-103</span></div>
+        <div class="card-body">
+          <h4>Dove SOP Potash</h4>
+          <div class="formula">K₂O 50% · S 18%</div>
+          <p class="ur">پھل کی مٹھاس اور وزن بڑھانے کے لیے۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>25–50 kg</dd></div>
+            <div><dt>Pack size</dt><dd>25 kg</dd></div>
+            <div><dt>Waqt</dt><dd>Phool aane par</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Aam</span><span class="tag">Aloo</span><span class="tag">Ganna</span></div>
+      </article>
+
+      <article class="card" data-cat="khad">
+        <div class="band khad"><span>Khad · Fertilizer</span><span>DA-104</span></div>
+        <div class="card-body">
+          <h4>Dove NPK 20-20-20</h4>
+          <div class="formula">Water soluble · 100% ghulne wali</div>
+          <p class="ur">ڈرپ اور فولیئر سپرے دونوں کے لیے۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>1–2 kg</dd></div>
+            <div><dt>Pack size</dt><dd>1 kg / 5 kg</dd></div>
+            <div><dt>Waqt</dt><dd>15 din ke waqfe se</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Sabziyat</span><span class="tag">Tunnel</span><span class="tag">Baagh</span></div>
+      </article>
+
+      <!-- SPRAY -->
+      <article class="card" data-cat="spray">
+        <div class="band spray"><span>Spray · Insecticide</span><span>DA-201</span></div>
+        <div class="card-body">
+          <h4>Dove Cyper 10 EC</h4>
+          <div class="formula">Cypermethrin 10% EC</div>
+          <p class="ur">سنڈی اور چبانے والے کیڑوں کے خلاف۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>400 ml</dd></div>
+            <div><dt>Pack size</dt><dd>250 ml / 1 L</dd></div>
+            <div><dt>Waqt</dt><dd>Shaam ke waqt</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Kapas</span><span class="tag">Makai</span><span class="tag">Sabziyat</span></div>
+      </article>
+
+      <article class="card" data-cat="spray">
+        <div class="band spray"><span>Spray · Insecticide</span><span>DA-202</span></div>
+        <div class="card-body">
+          <h4>Dove Acetam 20 SP</h4>
+          <div class="formula">Acetamiprid 20% SP</div>
+          <p class="ur">سفید مکھی اور تیلے کے لیے۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>100 g</dd></div>
+            <div><dt>Pack size</dt><dd>100 g / 500 g</dd></div>
+            <div><dt>Waqt</dt><dd>Hamla shuru hote hi</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Kapas</span><span class="tag">Mirch</span><span class="tag">Aam</span></div>
+      </article>
+
+      <article class="card" data-cat="spray">
+        <div class="band spray"><span>Spray · Fungicide</span><span>DA-203</span></div>
+        <div class="card-body">
+          <h4>Dove Mancoz 80 WP</h4>
+          <div class="formula">Mancozeb 80% WP</div>
+          <p class="ur">پھپھوندی اور جھلساؤ کی روک تھام۔</p>
+          <div class="spec">
+            <div><dt>Dose / 100 L</dt><dd>250 g</dd></div>
+            <div><dt>Pack size</dt><dd>500 g / 1 kg</dd></div>
+            <div><dt>Waqt</dt><dd>Barish se pehle</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Aloo</span><span class="tag">Aam</span><span class="tag">Tamatar</span></div>
+      </article>
+
+      <article class="card" data-cat="spray">
+        <div class="band spray"><span>Spray · Weedicide</span><span>DA-204</span></div>
+        <div class="card-body">
+          <h4>Dove Grass Clear 40 SC</h4>
+          <div class="formula">Selective weedicide</div>
+          <p class="ur">گندم کی فصل میں جڑی بوٹیوں کے لیے۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>500 ml</dd></div>
+            <div><dt>Pack size</dt><dd>500 ml</dd></div>
+            <div><dt>Waqt</dt><dd>Bijai ke 25–30 din baad</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Gandum</span><span class="tag">Chawal</span></div>
+      </article>
+
+      <!-- BEEJ -->
+      <article class="card" data-cat="beej">
+        <div class="band beej"><span>Beej · Seed</span><span>DA-301</span></div>
+        <div class="card-body">
+          <h4>Dove Cotton BT-121</h4>
+          <div class="formula">Hybrid · Certified</div>
+          <p class="ur">گرمی برداشت کرنے والی قسم، لمبا ریشہ۔</p>
+          <div class="spec">
+            <div><dt>Seed rate</dt><dd>8 kg / acre</dd></div>
+            <div><dt>Pack size</dt><dd>5 kg</dd></div>
+            <div><dt>Bijai</dt><dd>April – May</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Kapas</span><span class="tag">Hybrid</span></div>
+      </article>
+
+      <article class="card" data-cat="beej">
+        <div class="band beej"><span>Beej · Seed</span><span>DA-302</span></div>
+        <div class="card-body">
+          <h4>Dove Wheat Akbar-19</h4>
+          <div class="formula">Certified · Grade A</div>
+          <p class="ur">زیادہ پیداوار، کنگی سے محفوظ۔</p>
+          <div class="spec">
+            <div><dt>Seed rate</dt><dd>50 kg / acre</dd></div>
+            <div><dt>Pack size</dt><dd>50 kg</dd></div>
+            <div><dt>Bijai</dt><dd>Nov 1 – Nov 20</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Gandum</span><span class="tag">Rabi</span></div>
+      </article>
+
+      <article class="card" data-cat="beej">
+        <div class="band beej"><span>Beej · Seed</span><span>DA-303</span></div>
+        <div class="card-body">
+          <h4>Dove Maize DA-909</h4>
+          <div class="formula">Hybrid · Spring &amp; Autumn</div>
+          <p class="ur">بھاری چھلی، مضبوط تنا۔</p>
+          <div class="spec">
+            <div><dt>Seed rate</dt><dd>10 kg / acre</dd></div>
+            <div><dt>Pack size</dt><dd>10 kg</dd></div>
+            <div><dt>Bijai</dt><dd>Feb / Aug</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Makai</span><span class="tag">Hybrid</span></div>
+      </article>
+
+      <!-- MICRO -->
+      <article class="card" data-cat="micro">
+        <div class="band micro"><span>Micronutrient</span><span>DA-401</span></div>
+        <div class="card-body">
+          <h4>Dove Zinc 33%</h4>
+          <div class="formula">Zinc Sulphate · Powder</div>
+          <p class="ur">چاول اور مکئی میں زنک کی کمی کے لیے۔</p>
+          <div class="spec">
+            <div><dt>Dose / acre</dt><dd>5 kg</dd></div>
+            <div><dt>Pack size</dt><dd>5 kg</dd></div>
+            <div><dt>Waqt</dt><dd>Bijai / paneeri ke waqt</dd></div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">Chawal</span><span class="tag">Makai</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CROP CALENDAR ================= -->
+<section class="sec" id="calendar" style="background:var(--husk-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Fasal Guide</div>
+      <h3>Kis fasal ke liye kya cheez, kis waqt</h3>
+      <p>Ye asaan chart dealers ko counter par aur kisan ko khet mein foran faisla karne mein madad deta hai.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Fasal</th><th>Bijai ka waqt</th><th>Khad</th><th>Spray</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="crop-name">Cotton <span class="u">کپاس</span></td>
+            <td>April – May</td>
+            <td>DAP bijai par, Urea 2 bag</td>
+            <td>Cyper 10 EC · Acetam 20 SP</td>
+          </tr>
+          <tr>
+            <td class="crop-name">Wheat <span class="u">گندم</span></td>
+            <td>Nov 1 – Nov 20</td>
+            <td>DAP 1 bag, Urea 2 bag</td>
+            <td>Grass Clear 40 SC</td>
+          </tr>
+          <tr>
+            <td class="crop-name">Mango <span class="u">آم</span></td>
+            <td>Baagh — saara saal</td>
+            <td>SOP Potash, NPK 20-20-20</td>
+            <td>Mancoz 80 WP · Acetam 20 SP</td>
+          </tr>
+          <tr>
+            <td class="crop-name">Rice <span class="u">چاول</span></td>
+            <td>June – July</td>
+            <td>Zinc 33%, Urea</td>
+            <td>Grass Clear 40 SC</td>
+          </tr>
+          <tr>
+            <td class="crop-name">Chilli <span class="u">مرچ</span></td>
+            <td>Feb – March</td>
+            <td>NPK 20-20-20</td>
+            <td>Acetam 20 SP · Mancoz 80 WP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec" id="about">
+  <div class="wrap two">
+    <div class="prose reveal">
+      <div class="kicker">Hamara Taaruf</div>
+      <div class="sec-head" style="margin-bottom:20px"><h3>Multan se, kisan ke liye</h3></div>
+      <p>Dove Agro (Pvt) Limited ek registered agri-inputs company hai jo Janoobi Punjab ke kisano ko khad, zarai spray, certified beej aur micronutrients faraham karti hai.</p>
+      <p>Hamara maqsad seedha hai: <strong>asli maal, sahi rate, aur waqt par delivery</strong>. Har product registered aur batch-tested hai, aur hamari field team kisan ko khet par mashwara deti hai.</p>
+      <p class="ur">ہماری فیلڈ ٹیم کھیت پر آ کر مفت مشورہ دیتی ہے — بیماری کی پہچان سے لے کر سپرے کی مقدار تک۔</p>
+    </div>
+    <aside class="infobox reveal">
+      <h5>Company Information</h5>
+      <div class="row"><span>Legal name</span><span>Dove Agro (Pvt) Ltd</span></div>
+      <div class="row"><span>SECP Reg. No.</span><span>XXXXXXX</span></div>
+      <div class="row"><span>NTN</span><span>XXXXXXX-X</span></div>
+      <div class="row"><span>Sales Tax Reg.</span><span>XXXXXXXXXXXXX</span></div>
+      <div class="row"><span>Head office</span><span>Multan, Punjab</span></div>
+      <div class="row"><span>Qaim hui</span><span>2018</span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= DEALER ================= -->
+<section class="sec" id="dealer" style="padding-top:0">
+  <div class="wrap">
+    <div class="dealer reveal">
+      <div>
+        <h3>Apne ilaqe mein Dove Agro dealer banein</h3>
+        <p class="ur">اپنے علاقے میں ڈو ایگرو کی ڈیلرشپ حاصل کریں۔</p>
+        <p>Hum har tehsil mein limited dealers rakhte hain, taake aap ka ilaqa mehfooz rahe aur margin theek mile.</p>
+        <a class="btn-gold" style="margin-top:18px" href="#contact">Dealership ke liye apply karein</a>
+      </div>
+      <ul class="dealer-list">
+        <li><span class="dot"></span> Ilaqai exclusivity — ek tehsil, mehdood dealers</li>
+        <li><span class="dot"></span> Credit limit aur season-end settlement</li>
+        <li><span class="dot"></span> Free banner, shelf rack aur product literature</li>
+        <li><span class="dot"></span> Field officer ki mahana visit aur training</li>
+        <li><span class="dot"></span> Target achieve karne par bonus scheme</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Raabta</div>
+      <h3>Rate poochhein ya order dein</h3>
+      <p>Form bharein ya seedha WhatsApp karein — hamari team 24 ghante mein jawab deti hai.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="form">
+        <div class="field">
+          <label for="nm">Naam</label>
+          <input id="nm" type="text" placeholder="Apna poora naam likhein">
+        </div>
+        <div class="field">
+          <label for="ph">Mobile number</label>
+          <input id="ph" type="tel" placeholder="03XX-XXXXXXX">
+        </div>
+        <div class="field">
+          <label for="ct">Shehr / Tehsil</label>
+          <input id="ct" type="text" placeholder="Maslan: Shujabad">
+        </div>
+        <div class="field">
+          <label for="sel">Aap kya chahte hain?</label>
+          <select id="sel">
+            <option>Product ka rate</option>
+            <option>Order dena hai</option>
+            <option>Dealership chahiye</option>
+            <option>Fasal ka mashwara</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Tafseel</label>
+          <textarea id="msg" placeholder="Fasal, raqba aur zaroorat likh dein"></textarea>
+        </div>
+        <button class="submit" id="send">Message bhejein</button>
+        <p class="note" id="formnote">Ye sample form hai — abhi message send nahi hota.</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="cline">
+          <div class="ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1E5B39" stroke-width="2"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <div><div class="k">Office</div><div class="v">Shop #00, Agri Market,<br>Vehari Road, Multan</div></div>
+        </div>
+        <div class="cline">
+          <div class="ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1E5B39" stroke-width="2"><path d="M4 5c0 8 7 15 15 15l2-3-4-2-2 2c-2-1-5-4-6-6l2-2-2-4-3 2z"/></svg>
+          </div>
+          <div><div class="k">Phone</div><div class="v"><a href="tel:+920000000000">+92 300 0000000</a></div></div>
+        </div>
+        <div class="cline">
+          <div class="ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1E5B39" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <div><div class="k">Email</div><div class="v"><a href="mailto:info@doveagro.com">info@doveagro.com</a></div></div>
+        </div>
+        <div class="cline">
+          <div class="ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1E5B39" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <div><div class="k">Auqaat</div><div class="v">Somwar – Hafta<br>9:00 AM – 6:00 PM</div></div>
+        </div>
+        <a class="wa" style="width:100%;justify-content:center;margin-top:16px" href="https://wa.me/920000000000">WhatsApp par baat karein</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">Dove Agro (Pvt) Ltd</div>
+        <p style="font-size:14px;max-width:330px">Kisan ki zameen se mandi tak — khad, spray, beej aur mashwara, ek hi jagah.</p>
+      </div>
+      <div>
+        <h6>Products</h6>
+        <ul>
+          <li><a href="#products">Khad / Fertilizer</a></li>
+          <li><a href="#products">Spray / Pesticide</a></li>
+          <li><a href="#products">Beej / Seeds</a></li>
+          <li><a href="#products">Micronutrients</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Company</h6>
+        <ul>
+          <li><a href="#about">Hamara taaruf</a></li>
+          <li><a href="#dealer">Dealership</a></li>
+          <li><a href="#calendar">Fasal guide</a></li>
+          <li><a href="#contact">Raabta</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="legal">
+      <b>Dove Agro (Private) Limited</b> · SECP Registration No. XXXXXXX · NTN XXXXXXX-X<br>
+      Registered office: Vehari Road, Multan, Punjab, Pakistan<br>
+      © 2026 Dove Agro (Pvt) Ltd. Tamam huqooq mahfooz hain.
+    </p>
+
+    <div class="disclaimer">
+      <b style="color:#E0A32B">Zaroori:</b> Is page par diye gaye doses sirf misaal ke taur par hain. Spray aur khad hamesha product ke asli label aur Agriculture Extension ke mashware ke mutabiq istemal karein. Safety kit (mask, dastane) zaroor pehnein.
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/920000000000" aria-label="WhatsApp par raabta karein">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6 0l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.6-.1 1.3z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+  var burger = document.getElementById('burger');
+  var nav = document.getElementById('nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ nav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  // Product filter
+  var buttons = document.querySelectorAll('.filters button');
+  var cards = document.querySelectorAll('#grid .card');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+      var cat = btn.getAttribute('data-cat');
+      cards.forEach(function(c){
+        var show = (cat === 'all' || c.getAttribute('data-cat') === cat);
+        c.style.display = show ? 'flex' : 'none';
+      });
+    });
+  });
+
+  // Sample form
+  document.getElementById('send').addEventListener('click', function(){
+    var note = document.getElementById('formnote');
+    note.textContent = 'Ye sample hai — asli site par ye message aap ke WhatsApp ya email par pohanchega.';
+    note.style.color = '#1E5B39';
+  });
+
+  // Scroll reveal
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
