@@ -115,6 +115,14 @@
   .filters button:hover{border-color:var(--blue)}
   .filters button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
 
+
+  .pimg{display:grid;place-items:center;height:215px;padding:16px 16px 8px;position:relative;overflow:hidden}
+  .pimg::before{content:"";position:absolute;inset:0;opacity:.07;background:currentColor}
+  .pimg img{max-height:100%;width:auto;max-width:78%;object-fit:contain;position:relative;z-index:1;
+            filter:drop-shadow(0 6px 14px rgba(15,44,85,.18));transition:transform .25s ease}
+  .card:hover .pimg img{transform:scale(1.05)}
+  @media(max-width:640px){.pimg{height:240px}}
+
   /* PRODUCT CARDS */
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   @media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
@@ -307,6 +315,7 @@
       <!-- NAMOK -->
       <article class="card" data-cat="spray">
         <div class="band" style="background:#8FA61E"><span>Bio Stimulant</span><span>Ref. Std 31</span></div>
+        <div class="pimg" style="color:#8FA61E"><img src="products/namok.png" alt="NAMOK Bio Stimulant" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>NAMOK</h4><span class="nastaliq" style="color:#8FA61E">نموک</span></div>
           <div class="formula">Amino Acid + Plant Growth Regulator</div>
@@ -323,6 +332,7 @@
       <!-- ROSVEN -->
       <article class="card" data-cat="spray">
         <div class="band" style="background:#0C9BD8"><span>Boron 5%</span><span>Ref. Std 11</span></div>
+        <div class="pimg" style="color:#0C9BD8"><img src="products/rosven.png" alt="ROSVEN Boron 5%" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>ROSVEN</h4><span class="nastaliq" style="color:#0C9BD8">روسون</span></div>
           <div class="formula">Boron 5% W/V (50 g/L)</div>
@@ -339,6 +349,7 @@
       <!-- POTRA -->
       <article class="card" data-cat="liquid">
         <div class="band" style="background:#F07C22"><span>Potash 30%</span><span>Ref. Std 21</span></div>
+        <div class="pimg" style="color:#F07C22"><img src="products/potra.png" alt="POTRA Potash 30%" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>POTRA</h4><span class="nastaliq" style="color:#F07C22">پوٹرا</span></div>
           <div class="formula">K₂O 300 g/L (30% W/V) · Liquid</div>
@@ -355,6 +366,7 @@
       <!-- SAVANA -->
       <article class="card" data-cat="liquid">
         <div class="band" style="background:#8A6D1F"><span>Potassium Humate</span><span>Ref. Std 7</span></div>
+        <div class="pimg" style="color:#8A6D1F"><img src="products/savana.png" alt="SAVANA Potassium Humate" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>SAVANA</h4><span class="nastaliq" style="color:#8A6D1F">سوانا</span></div>
           <div class="formula">Humic Acid 10% · K₂O 3.5% · Liquid</div>
@@ -371,6 +383,7 @@
       <!-- DOVE ZINC 10 -->
       <article class="card" data-cat="liquid">
         <div class="band" style="background:#3AAA35"><span>Zinc 10%</span><span>Ref. Std 41</span></div>
+        <div class="pimg" style="color:#3AAA35"><img src="products/dove-zinc-10.png" alt="DOVE ZINC 10" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>DOVE ZINC 10</h4><span class="nastaliq" style="color:#3AAA35">ڈیو زنک ۱۰</span></div>
           <div class="formula">Zinc 10% W/V (100 g/L) · Liquid</div>
@@ -388,6 +401,7 @@
       <!-- ZORVA -->
       <article class="card" data-cat="solid">
         <div class="band" style="background:#0071BC"><span>Zinc 27% Granular</span><span>Dane-dar</span></div>
+        <div class="pimg" style="color:#0071BC"><img src="products/zorva.png" alt="ZORVA Zinc 27% Granular" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>ZORVA</h4><span class="nastaliq" style="color:#0071BC">زوروا</span></div>
           <div class="formula">Zinc 270 g/kg = 27% w/w</div>
@@ -404,6 +418,7 @@
       <!-- NILEON -->
       <article class="card" data-cat="solid">
         <div class="band" style="background:#EC008C"><span>Chelated Zinc 5%</span><span>EDTA</span></div>
+        <div class="pimg" style="color:#EC008C"><img src="products/nileon.png" alt="NILEON Chelated Zinc 5%" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>NILEON</h4><span class="nastaliq" style="color:#EC008C">نیلون</span></div>
           <div class="formula">Chelated Zinc EDTA as Zn 5% w/w (50 g/kg)</div>
@@ -420,6 +435,7 @@
       <!-- ECROVA -->
       <article class="card" data-cat="solid">
         <div class="band" style="background:#00A0AF"><span>Multi Micro Nutrients</span><span>Ref. Std 13</span></div>
+        <div class="pimg" style="color:#00A0AF"><img src="products/ecrova.png" alt="ECROVA Multi Micro Nutrients" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>ECROVA</h4><span class="nastaliq" style="color:#00A0AF">ایکروا</span></div>
           <div class="formula">Zinc 5% + Ferrous (Fe) 5% · Solid</div>
@@ -437,6 +453,7 @@
       <!-- SIBRON -->
       <article class="card" data-cat="solid">
         <div class="band" style="background:#E31E24"><span>Potassium Humate</span><span>Ref. Std 1</span></div>
+        <div class="pimg" style="color:#E31E24"><img src="products/sibron.png" alt="SIBRON Potassium Humate" loading="lazy"></div>
         <div class="card-body">
           <div class="pname"><h4>SIBRON</h4><span class="nastaliq" style="color:#E31E24">سیبرون</span></div>
           <div class="formula">Humic Acid 40% · K₂O 7% · Granular</div>
